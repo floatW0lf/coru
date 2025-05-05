@@ -14,6 +14,10 @@
 // its parent's while running
 static coru_t *coru_active = NULL;
 
+coru_t* coru_get_current()
+{
+    return coru_active;
+}
 
 // Coroutine operations
 int coru_create(coru_t *coru, void (*cb)(void*), void *data, size_t size) {
