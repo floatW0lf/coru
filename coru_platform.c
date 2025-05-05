@@ -258,7 +258,8 @@ __asm__ (
     "\t move $v0, $a1 \n"       // return arg
     "\t j $ra \n"
 );
-
+#elif defined(CORU_PLATFORM_EXT)
+#include "coru_platform_ext.h"
 #else
 #error "Unknown platform! Please update coru_platform.c"
 #endif
