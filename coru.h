@@ -30,6 +30,8 @@ typedef struct coru {
 } coru_t;
 
 
+coru_t* coru_get_current();
+
 // Create a coroutine, dynamically allocating memory for the stack
 int coru_create(coru_t *coru, void (*cb)(void*), void *data, size_t size);
 
